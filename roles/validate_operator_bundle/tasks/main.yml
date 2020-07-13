@@ -12,7 +12,7 @@
     dest: "{{ work_dir }}/validation-version.txt"
   when: sdk_version_result.stdout is defined
 
-  - name: "Set bundle_validate variable"
+- name: "Set bundle_validate variable"
   set_fact:
     bundle_validate: "{{ bundle_image }}"
   when: run_upstream|bool
